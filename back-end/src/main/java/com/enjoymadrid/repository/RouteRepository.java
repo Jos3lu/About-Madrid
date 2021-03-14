@@ -1,0 +1,9 @@
+package com.enjoymadrid.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.enjoymadrid.model.Route;
+
+public interface RouteRepository extends JpaRepository<Route, Long> {
+
+}
