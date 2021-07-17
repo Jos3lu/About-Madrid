@@ -39,7 +39,7 @@ public class User {
 	@JsonView(BasicUser.class)
 	private List<String> comments;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+	@OneToMany(mappedBy = "user")
 	@JsonView(RoutesUser.class)
 	private List<Route> routes;
 	

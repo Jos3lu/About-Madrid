@@ -3,7 +3,6 @@ package com.enjoymadrid.model;
 import java.util.LinkedList;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,7 +29,7 @@ public class Route {
 	@JsonView(BasicRoute.class)
 	private String name; 
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "route")
+	@OneToMany(mappedBy = "route")
 	@JsonView(PointsRoute.class)
 	private List<Point> points;
 	
